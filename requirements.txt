@@ -13,9 +13,12 @@ langchain-huggingface
 transformers
 huggingface-hub
 torch
+torchvision
 sentence-transformers
 
 python-dotenv
 
 numpy
 scikit-learn
+
+streamlit
