@@ -5,7 +5,7 @@ langchain-openai
 openai
 
 langchain-anthropic
-
+langchain_ollama
 langchain-google-genai
 google-generativeai
 

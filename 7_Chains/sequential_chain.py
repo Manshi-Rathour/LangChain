@@ -13,14 +13,21 @@ llm = HuggingFaceEndpoint(
 
 model = ChatHuggingFace(llm=llm)
 
-prompt = PromptTemplate(template='Write 5 interesting fact about {topic}', input_variables=['topic'])
+prompt1 = PromptTemplate(
+    template="Generate a detailed report on {topic}",
+    input_variables=['topic']
+)
+
+prompt2 = PromptTemplate(
+    template="Generate a 5 points summary from the following text \n {text}",
+    input_variables=['text']
+)
 
 parser = StrOutputParser()
 
-chain = prompt | model | parser
+chain = prompt1 | model | parser | prompt2 | model | parser
 
-result = chain.invoke({'topic': 'cricket'})
+result = chain.invoke({'topic': 'unemployment in india'})
 
 print(result)
-
 print(chain.get_graph().print_ascii())
