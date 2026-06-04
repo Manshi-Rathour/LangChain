@@ -1,5 +1,6 @@
 langchain
 langchain-core
+langchain_community
 
 langchain-openai
 openai
@@ -24,3 +25,5 @@ scikit-learn
 streamlit
 
 pydantic
+
+bs4
