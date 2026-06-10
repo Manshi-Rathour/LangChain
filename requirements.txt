@@ -28,3 +28,4 @@ streamlit
 pydantic
 
 bs4
+nbformat
